@@ -31,6 +31,9 @@ class TaskService:
         if not title or not title.strip():
             raise ValueError("Task title is required")
 
+        if len(title.strip()) < 3:
+             raise ValueError("Task title must contain at least 3 characters")
+
         return self.repository.update_task(
             task_id,
             title.strip(),

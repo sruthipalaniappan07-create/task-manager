@@ -1,2 +1,4 @@
 tasks.db
 tasks.db
+__pycache__/
+*.pyc
